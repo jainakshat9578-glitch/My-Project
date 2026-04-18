@@ -7,6 +7,7 @@ import resurfaceRoutes from "./routes/resurface.routes.js"
 import authRoutes from "./routes/auth.routes.js"
 import cookieParser from "cookie-parser"
 
+
 const app=express()
 
 app.use(cors({
@@ -22,6 +23,8 @@ app.use("/api/search",searchRoutes)
 app.use("/api/related",relatedRoutes)
 app.use("/api/resurface",resurfaceRoutes)
 app.use("/api/auth",authRoutes)
+
+
 
 
 

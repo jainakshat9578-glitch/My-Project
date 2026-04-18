@@ -1,7 +1,11 @@
 import dotenv from "dotenv"
 dotenv.config()
 import app from "./app.js"
+import express from "express"
 import connectToDB from "./config/DataBase.js"
+
+
+const PORT = process.env.PORT || 3000
 
 
 if (!process.env.GEMINI_API_KEY) {
@@ -14,5 +18,5 @@ if (!process.env.GEMINI_API_KEY) {
 connectToDB()
 
 app.listen(3000,()=>{
-    console.log("server is running on port 3000")
+    console.log(`server is running on port ${PORT}`)
 })
