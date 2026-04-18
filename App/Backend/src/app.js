@@ -11,7 +11,7 @@ import cookieParser from "cookie-parser"
 const app=express()
 
 app.use(cors({
-    origin: "https://my-project-frontend-zti9.onrender.com",
+    origin: "https://localhost:3000",
     credentials: true
 }))
 app.use(express.json())
