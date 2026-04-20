@@ -33,11 +33,7 @@ export const register = async (req, res) => {
 
     res.cookie("token",token,{
       httpOnly: true,
-<<<<<<< HEAD
-      secure: true,
-=======
       secure:true,
->>>>>>> 09f54a686805a91a26a99a76ab53423cbcdcdd11
       sameSite: "none"
     })
 
