@@ -33,8 +33,8 @@ export const register = async (req, res) => {
 
     res.cookie("token",token,{
       httpOnly: true,
-      secure: false,
-      sameSite: "lax"
+      secure: true,
+      sameSite: "none"
     })
 
     res.status(201).json({
@@ -73,8 +73,8 @@ export const login = async (req, res) => {
 
 res.cookie("token", token, {
   httpOnly: true,
-  secure: false,
-  sameSite: "lax",
+  secure: true,
+  sameSite: "none",
 });
 
 res.json({
@@ -94,8 +94,8 @@ res.json({
 export const logout = (req,res)=>{
     res.clearCookie("token",{
       httpOnly:true,
-      sameSite: "lax",
-      secure: false
+      sameSite: "none",
+      secure: true
     })
 
    res.json({
