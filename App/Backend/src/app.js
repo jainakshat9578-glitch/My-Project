@@ -12,7 +12,7 @@ const app=express()
 
 app.use(cors({
     origin: ["http://localhost:5173",
-        "https://my-project-livid-mu-98.vercel.app/"
+        "https://my-project-livid-mu-98.vercel.app"
     ],
     credentials: true
 }))
