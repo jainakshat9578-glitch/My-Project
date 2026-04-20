@@ -17,9 +17,16 @@ function App() {
   const isAuthenticated = useAuthStore(state=> state.isAuthenticated)
   const checkingAuth = useAuthStore(state => state.checkingAuth)
 
-  useEffect(()=>{
-    initializeAuth()
-  }, [])
+  
+useEffect(()=>{
+  initializeAuth()
+
+  // wake backend
+  fetch("https://second-brain-backend-iba2.onrender.com")
+    .catch(()=>{})
+    
+}, [])
+
 
   useEffect(()=>{
     if(isAuthenticated){
