@@ -11,7 +11,9 @@ import cookieParser from "cookie-parser"
 const app=express()
 
 app.use(cors({
-    origin: "https://localhost:5173",
+    origin: ["http://localhost:5173",
+        "https://my-project-livid-mu-98.vercel.app/"
+    ],
     credentials: true
 }))
 app.use(express.json())
